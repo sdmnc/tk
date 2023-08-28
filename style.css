@@ -2,7 +2,10 @@ body {
     margin: 0;
     color: white;
     font-size: 14px;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
+    width: 100%; /* Instead of a fixed width in pixels */
+    max-width: 1200px; /* You can also set a maximum width */
+    margin: 0 auto; /* Center the container */
 }
 
 ul {
@@ -14,34 +17,45 @@ ul {
 .top-banner {
     background-image: url("img/cover.png");
     background-repeat: no-repeat;
-    padding: 40px; 0 120px;
+    padding: 40px 0 120px;
+    width: 100%;
+    height: auto;
 
 }
 
 .container {
-    max-width: 1020px;
+    width:100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 
 }
 
 .top-banner_header {
     width: 100%;
     display: flex;
+    flex-wrap:wrap;
     align-items: center;
-    margin-bottom: 160px;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
 .header_nav {
     margin-left: auto;
+    order: 2;
+    flex-basis: 100%;
+    margin-top: 20px;
 }
 
 .header_nav .nav_list {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 
 }
@@ -51,6 +65,8 @@ ul {
     display: flex;
     align-items: center;
     gap: 15px;
+    order: 1;
+    margin-top: 20px;
 }
 
 .action_item {
@@ -72,38 +88,42 @@ button {
 h1,
 h4 {
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;;
 }
 
 h1 {
     font-weight: 800;
-    font-size: 58px;
-    line-height: 80px;
+    font-size: 36px;
+    line-height: 48px;
     
 
 }
 
 h4 {
 
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 24px;
 
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: #FFA62B; /* Primary button color */
     color: white;
     text-decoration: none;
-    border-radius: 37px;
+    border-radius: 24px;
     margin-right: 10px;
     border:1px solid white;
+    transition: background-color 0.3s;
 }
 
 .button.button--secondary {
     background-color: transparent; /* Secondary button color */
+}
+.button:hover {
+    background-color: #E69523;
 }
 
 a {
@@ -116,11 +136,12 @@ a {
 }
 
 top-banner_content {
-    max-width: 570px;
+    max-width: 100%;
 
 }
 .top-banner_actions {
     display:flex;
+    flex-wrap: wrap;
     gap:10px;
     justify-content:center;
 }
