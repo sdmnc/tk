@@ -92,29 +92,19 @@ h4 {
 }
 
 .button {
-
-    width: 185px;
-    padding: 10px 36px 10px 36px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFA62B; /* Primary button color */
+    color: white;
+    text-decoration: none;
     border-radius: 37px;
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 26px;
-    letter-spacing: 0.2px;
-    align-items: center;
+    margin-right: 10px;
     border:1px solid white;
-    background: transparent;
-    cursor: pointer;
-
-
 }
 
-.button--primary {
-    background-color: #FFA62B;
-    border-color: #FFA62B;
-
+.button.button--secondary {
+    background-color: transparent; /* Secondary button color */
 }
-
 
 a {
     color: inherit;
