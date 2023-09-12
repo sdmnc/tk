@@ -10,9 +10,12 @@ console.log(country + "'s population is " + population + " billions");
 
 let isIsland = false;
 
-let coutryDescription = country + " is located in " + continent + ", " + population + " mln people live here";
-//Should we print it in console?//
-console.log(coutryDescription);
+//let coutryDescription = country + " is located in " + continent + ", " + population + " mln people live here";
+
+let countryDescription = `Country ${country} is located in ${continent}, ${population} mln people live here`;
+console.log(countryDescription);
+
+
 
 // Home -work for lesson #14 //
 
@@ -56,7 +59,7 @@ const NUMBER = 42;
 function isOddEven() {
     let result = NUMBER / 2
     // console.log(result);
-    if (result == 0) {
+    if (result === 0) {
         console.log(NUMBER + " is Even")
     } else
         console.log(NUMBER + " is Odd")
@@ -94,7 +97,9 @@ if (isInStock) {
 
 //  Leap Year//
 
-let year = 2023;
+const currentDate = new Date();
+const year = currentDate.getFullYear();
+
 
 let resultYear = year % 4;
 if (resultYear == 0) {
@@ -160,7 +165,9 @@ switch (true) {
 // Functions //
 
 function TellFortune(n, z, y, x) {
-    console.log("You will be " + x + " in " + y + " , and get married to " + z + " with " + n + " kids")
+    let tellFortune = `You will be ${x} in ${y}, and get married to ${z} with ${n} kids`;
+    console.log(tellFortune);
+    //console.log("You will be " + x + " in " + y + " , and get married to " + z + " with " + n + " kids")
 }
 TellFortune(2, "Eve", "Heaven", "CTO")
 TellFortune(0, "John", "Thailand", "CEO")
@@ -191,3 +198,5 @@ func(33, 3, 100)
 console.log(func(33, 3, 100))
 console.log(func(15, 2, 100))
 console.log(func(40, 1, 100))
+
+
