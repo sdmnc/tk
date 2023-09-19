@@ -60,21 +60,78 @@ console.log(finalArray.sort())
 
 // Objects //
 
-const person = {fname: "John", name: "Doe", age: 30, job: "developer"}
+const person = { fname: "John", name: "Doe", age: 30, job: "developer" }
 
-function personPropreties(obj){
-    let i=0
-    for(let key in obj){i++}
+function personPropreties(obj) {
+    let i = 0
+    for (let key in obj) { i++ }
 }
 console.log("Person characters " + i)
 
 //Array random number//
-function randomArray(n){
+function randomArray(n) {
     const ranArr = new Array()
-    for(let i=1; i<=n; i++){
-     //   console.log(i)
+    for (let i = 1; i <= n; i++) {
+        //   console.log(i)
         ranArr.push(i)
     }
     console.log(ranArr)
 }
 randomArray(50)
+
+//Biggest number//
+
+const numbers2 = [5, 6, 20, 345, 80, 2, 3444, 40]
+let theBiggestNumber = 0
+
+for (let i = 0; i <= numbers2.length; i++) {
+    if (numbers2[i] > theBiggestNumber) {
+        theBiggestNumber = numbers2[i]
+    }
+}
+console.log("The Biggest Number " + theBiggestNumber)
+
+//Average //
+
+let total = 0;
+let count = 0;
+function average(grades) {
+    console.log(grades)
+
+    for (let proprety in grades) {
+        if (typeof grades[proprety] === 'number') {
+
+            total += grades[proprety];
+
+            count++;
+        }
+
+    }
+    return total / count;
+}
+let grades = { math: 8, literature: 7, history: 9, biology: 5 }
+console.log(average(grades));
+
+// Object Dog (Pes)//
+
+let dog = new Object();
+
+function Dog(nickname, age, color) {
+    this.name = nickname
+    this.age = age
+    this.color = color
+    this.puppiesNames = [];
+}
+
+function addPuppies(dog, puppiesNumber) {
+    for (let i = 1; i <= puppiesNumber; i++) {
+        dog.puppiesNames.push("Puppy" + i);
+    }
+}
+
+let myDog = new Dog("Buddy", 5, "Golden");
+
+addPuppies(myDog, 3);
+
+console.log(myDog.puppiesNames);
+console.log(myDog)
