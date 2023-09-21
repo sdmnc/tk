@@ -40,22 +40,22 @@ const company = [["Dev", "QA", "HR", "Finance"],
 ["Barbie", "Ken", "Marusia", "Lea"]
 
 ]
-const sortedArray = new Array()
+
 const myArray = new Array()
 for (let i = 0; i < company.length; i++) {
     if (i > 0) {
-        //  console.log(company[i])
-        let name = company[i]
-        sortedArray.push(company[i])
+        
+        myArray.push(company[i])
     }
 }
-console.log(sortedArray)
+console.log(myArray)
 const finalArray = new Array
-for (i = 0; i < sortedArray.length; i++) {
-    for (j = 0; j < sortedArray[i].length; j++) {
-        finalArray.push(sortedArray[i][j]);
+for (i = 0; i <  myArray.length; i++) {
+    for (j = 0; j <  myArray[i].length; j++) {
+        finalArray.push( myArray[i][j]);
     }
 }
+console.log("====")
 console.log(finalArray.sort())
 
 // Objects //
