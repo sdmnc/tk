@@ -91,3 +91,25 @@ let initialString = "Hello, World!";
 console.log(reversedWords(initialString));
 
 // Palindrome//
+
+let palindrome = "racecar"
+let notPalindrome = "abcdefg"
+
+function isPalindrome(string) {
+  let i = 0;
+  let myArr = Array.from(string)
+  let len = myArr.length;
+
+  while (i < (myArr.length / 2)) {
+    let firstChar = myArr[i]
+    i++
+
+    if (myArr[i] !== myArr[len - 1 - i]) {
+      return false;
+
+    }
+  }
+  return true
+}
+console.log(isPalindrome(palindrome))
+console.log(isPalindrome(notPalindrome))
