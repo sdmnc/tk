@@ -7,7 +7,7 @@ function printObj(person) {
 
   let keys = Object.keys(person);
   let values = Object.values(person);
-  let count = keys.length; // or va
+  let count = keys.length;
 
   while (i < count) {
     console.log(keys[i] + ": " + values[i]);
@@ -55,10 +55,11 @@ console.log(combineObject(helloWorld));
 // 4 number of wowels//
 
 function countVowels(str) {
+  let lowerString = str.toLowerCase();
   let count = 0;
-  const vowels = "aeiouAEIOU"; // To count both uppercase and lowercase vowels
+  const vowels = "aeiouy";
 
-  for (let char of str) {
+  for (let char of lowerString) {
     if (vowels.includes(char)) {
       count++;
     }
@@ -68,7 +69,7 @@ function countVowels(str) {
 }
 
 // Example usage
-const input = "“Hello world, my name is Albert”";
+const input = "Hello world, my name is Albert";
 console.log(countVowels(input)); // Outputs: 3
 
 // Reverse string//
@@ -94,6 +95,7 @@ console.log(reversedWords(initialString));
 
 let palindrome = "racecar"
 let notPalindrome = "abcdefg"
+let pal = 'level'
 
 function isPalindrome(string) {
   let i = 0;
@@ -101,7 +103,6 @@ function isPalindrome(string) {
   let len = myArr.length;
 
   while (i < (myArr.length / 2)) {
-    let firstChar = myArr[i]
     i++
 
     if (myArr[i] !== myArr[len - 1 - i]) {
@@ -109,7 +110,8 @@ function isPalindrome(string) {
 
     }
   }
-  return true
+  return true;
 }
-console.log(isPalindrome(palindrome))
-console.log(isPalindrome(notPalindrome))
+console.log(isPalindrome(palindrome));
+console.log(isPalindrome(notPalindrome));
+console.log(isPalindrome(pal));
