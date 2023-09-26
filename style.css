@@ -274,5 +274,5 @@ a {
 
 }
 .footer__main{
-    grid-column-end: 3;
+    grid-area: main;
 }
